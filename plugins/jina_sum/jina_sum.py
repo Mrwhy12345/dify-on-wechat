@@ -64,7 +64,8 @@ class JinaSum(Plugin):
                 return
             if retry_count == 0:
                 logger.debug("[JinaSum] on_handle_context. content: %s" % content)
-                reply = Reply(ReplyType.TEXT, "🎉正在为您生成总结，请稍候...")
+                #reply = Reply(ReplyType.TEXT, "🎉正在为您生成总结，请稍候...")
+                reply = Reply(ReplyType.TEXT, "暂不回复...")
                 channel = e_context["channel"]
                 channel.send(reply, context)
 
