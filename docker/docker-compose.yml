@@ -8,7 +8,7 @@ services:
     environment:
       TZ: Asia/Shanghai
       DIFY_API_BASE: 'http://dify.mrwhy.chat/v1'
-      DIFY_API_KEY: 'app-1cNiP4h8goOuQh9zwcYvRlFr'
+      DIFY_API_KEY: ''
       DIFY_APP_TYPE: 'agent'
       MODEL: 'dify'
       SINGLE_CHAT_PREFIX: '[""]'
