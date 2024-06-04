@@ -1,16 +1,19 @@
-version: '2.0'
+#version: '2.0'
 services:
   dify-on-wechat:
-    image: hanfangyuan/dify-on-wechat
+    image: Mrwhy12345/dify-on-wechat
     container_name: dify-on-wechat
     security_opt:
       - seccomp:unconfined
     environment:
-      DIFY_API_BASE: 'https://api.dify.ai/v1'
-      DIFY_API_KEY: 'app-xx'
-      DIFY_APP_TYPE: 'chatbot'
+      TZ: Asia/Shanghai
+      DIFY_API_BASE: 'http://dify.mrwhy.chat/v1'
+      DIFY_API_KEY: 'app-1cNiP4h8goOuQh9zwcYvRlFr'
+      DIFY_APP_TYPE: 'agent'
       MODEL: 'dify'
       SINGLE_CHAT_PREFIX: '[""]'
       SINGLE_CHAT_REPLY_PREFIX: '""'
-      GROUP_CHAT_PREFIX: '["@bot"]'
+      GROUP_CHAT_PREFIX: '["路易吉（bot）"]'
       GROUP_NAME_WHITE_LIST: '["ALL_GROUP"]'
+    volumes:
+      - C:\work-20240425\dify-on-wechat\plugins:/app/plugins/
