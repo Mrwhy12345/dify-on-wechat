@@ -64,10 +64,10 @@ class JinaSum(Plugin):
                 return
             if retry_count == 0:
                 logger.debug("[JinaSum] on_handle_context. content: %s" % content)
+                # 仅登记日志， 不立刻回复， 减少信息干扰
                 #reply = Reply(ReplyType.TEXT, "🎉正在为您生成总结，请稍候...")
-                reply = Reply(ReplyType.TEXT, "暂不回复---111+++...")
-                channel = e_context["channel"]
-                channel.send(reply, context)
+                #channel = e_context["channel"]
+                #channel.send(reply, context)
 
             target_url = html.unescape(content) # 解决公众号卡片链接校验问题，参考 https://github.com/fatwang2/sum4all/commit/b983c49473fc55f13ba2c44e4d8b226db3517c45
             jina_url = self._get_jina_url(target_url)
